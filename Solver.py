@@ -4,11 +4,11 @@ import math
 
 
 class Solver:
-    def demo(self):
-        while True:
-            a = int(input("a "))
-            b = int(input("b "))
-            c = int(input("c "))
+    def demo(self,a,b,c):
+        #while True:
+            # a = int(input("a "))
+            # b = int(input("b "))
+            # c = int(input("c "))
             d = b ** 2 - 4 * a * c
             if d >= 0:
                 disc = math.sqrt(d)
@@ -19,6 +19,7 @@ class Solver:
                 print('error')
 
 
-Solver().demo()
+Solver().demo(2,1,2)
 
-#test
+
+
