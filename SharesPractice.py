@@ -16,9 +16,9 @@ print(ShareObject.get_price())
 
 print(ShareObject.get_trade_datetime())
 
-pprint(ShareObject.get_historical('2016-05-23', '2016-05-29'))
+#pprint(ShareObject.get_historical('2016-05-23', '2016-05-29'))
 
-# closes = [c['Close'] for c in ShareObject.get_historical('2016-05-23', '2016-05-29')]
-#
-# print(closes)
+closes = [c['Close'] for c in ShareObject.get_historical('2016-05-23', '2016-05-29')]
+
+print(closes)
 
