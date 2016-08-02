@@ -33,18 +33,20 @@ values1 = [float(i) for i in array1]
 values2 = [float(i) for i in array2]
 MKTvalues = [float(i) for i in arrayMKT]
 
+print(values1)
+
 # correlation1 = pearsonr(values1, values2)
 # correlation = corrcoef([values1, values2, values3])
 # print(correlation1, '\n', correlation, )
 
 test_cov = cov(values1,MKTvalues,ddof=0)[0][1] # defo need this one!
 
-print(test_cov)
-
-test_var = var(MKTvalues)
-
-print(test_var)
-
-beta = test_cov/test_var
-
-print("%.2f" % beta)
+# print(test_cov)
+#
+# test_var = var(MKTvalues)
+#
+# print(test_var)
+#
+# beta = test_cov/test_var
+#
+# print("%.2f" % beta)
