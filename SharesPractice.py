@@ -4,21 +4,21 @@ __author__ = 'ONicholls'
 from yahoo_finance import Share
 from pprint import pprint
 
-ShareObject = Share('ARM.L')
+ShareObject = Share('BP.L')
 
 print(ShareObject.get_open())
 print
 print(ShareObject.get_price())
 print
-#
-#ShareObject.refresh()
-#print(ShareObject.get_price())
 
-#print(ShareObject.get_trade_datetime())
+ShareObject.refresh()
+print(ShareObject.get_price())
 
-#pprint(ShareObject.get_historical('2016-05-23', '2016-05-29'))
+print(ShareObject.get_trade_datetime())
 
-#closes = [c['Close'] for c in ShareObject.get_historical('2016-05-23', '2016-05-29')]
+pprint(ShareObject.get_historical('2016-05-23', '2016-05-29'))
 
-#print(closes)
+closes = [c['Close'] for c in ShareObject.get_historical('2016-05-23', '2016-05-29')]
+
+print(closes)
 
