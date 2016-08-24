@@ -33,15 +33,18 @@ values1 = [float(i) for i in array1]
 values2 = [float(i) for i in array2]
 MKTvalues = [float(i) for i in arrayMKT]
 
-print(values1)
+#print(values1,'\n', len(values1))
 
-# correlation1 = pearsonr(values1, values2)
-# correlation = corrcoef([values1, values2, values3])
-# print(correlation1, '\n', correlation, )
+correlation1 = pearsonr(values1, values2) # only takes two arguments #scipy.stats.pearsonr
 
-test_cov = cov(values1,MKTvalues,ddof=0)[0][1] # defo need this one!
+correlation = corrcoef([values1, values2, values3, MKTvalues]) # can take as many as one wants # numpy.corrcoef
+#print(correlation1, '\n', correlation )
 
-# print(test_cov)
+print(correlation[0])
+
+#test_cov = cov(values1, MKTvalues, ddof=0)[0][1] # defo need this one!
+
+#print(test_cov)
 #
 # test_var = var(MKTvalues)
 #
